@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>轮播图</title>
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+
+	<script type="text/javascript">
+			window.onload=function()
+			{
+
+				var oPrev=document.getElementById("prev");
+
+				var oNext=document.getElementById("next");
+
+				var oMain=document.getElementById("main");
+
+				var oLi=oMain.getElementsByTagName('li');
+				
+				var num=0;
+				oLi[num].style.zIndex="1";
+
+				oPrev.onclick=function()
+				{
+					num--;
+					if (num<0) 
+					{
+						num=2;
+					}
+					for (var i = 0; i < oLi.length; i++) 
+					{
+						oLi[i].style.zIndex="-1";
+					}
+						oLi[num].style.zIndex="1";
+				};
+				oNext.onclick=function()
+				{
+					num++;
+					if (num>3)
+					{
+						num=0;
+					}
+					for (var i = 0; i < oLi.length; i++) 
+					{
+						oLi[i].style.zIndex="-1";
+					}
+					oLi[num].style.zIndex="1";
+				};
+
+
+
+			}
+
+	</script>
+</head>
+<body>
+		
+		<ul id="main">
+			<span id="prev"></span>
+			<span id="next"></span>
+            <li>
+                <img src="../img/1.jpg" alt="picture01">
+            </li>
+            <li>
+                <img src="../img/2.jpg" alt="picture02">
+            </li>
+            <li>
+                <img src="../img/3.jpg" alt="picture03">
+            </li>
+        </ul>
+</div>
+</body>
+</html>
