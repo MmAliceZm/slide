@@ -1,0 +1,47 @@
+li
+{
+	list-style: none;
+}
+
+
+
+#main
+{
+	display: block;
+
+	position: absolute;
+	width: 300px;
+	height: 290px;
+
+}
+#main li
+{
+	background: pink;
+	z-index: -1;
+	padding: 20px;
+	position: absolute;
+
+}
+#prev,#next
+{
+	display: block;
+	width: 50px;
+	height: 100px;
+	position: absolute;
+	z-index: 2;
+	
+}
+#prev
+{
+	
+	background: url(../img/向左.png) 125px 135px;
+	left: -50px;
+	margin: 100px;
+}
+#next
+{
+	
+	background: url(../img/right.png) 140px 135px ;
+	left: 200px;
+	margin: 100px;
+}
